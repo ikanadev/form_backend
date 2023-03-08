@@ -2,15 +2,15 @@ package handlers
 
 import (
 	"fmt"
-	"form-backend/db"
-	"form-backend/structs"
-	"form-backend/utils"
 	"net/http"
 	"strconv"
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
+	"github.com/vmkevv/form_backend/db"
+	"github.com/vmkevv/form_backend/structs"
+	"github.com/vmkevv/form_backend/utils"
 )
 
 // GetFormDoc get a doc form

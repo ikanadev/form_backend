@@ -1,12 +1,12 @@
 package handlers
 
 import (
-	"form-backend/db"
-	"form-backend/utils"
 	"net/http"
 	"strconv"
 
 	"github.com/gin-gonic/gin"
+	"github.com/vmkevv/form_backend/db"
+	"github.com/vmkevv/form_backend/utils"
 )
 
 // GetFormList get all user list

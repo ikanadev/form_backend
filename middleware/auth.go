@@ -1,13 +1,13 @@
 package middleware
 
 import (
-	"form-backend/structs"
-	"form-backend/utils"
 	"net/http"
 	"strings"
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
+	"github.com/vmkevv/form_backend/structs"
+	"github.com/vmkevv/form_backend/utils"
 )
 
 // Auth handles token validation

@@ -1,11 +1,10 @@
 package main
 
 import (
-	"form-backend/db"
-	"form-backend/handlers"
-	"form-backend/middleware"
-
 	"github.com/gin-gonic/gin"
+	"github.com/vmkevv/form_backend/db"
+	"github.com/vmkevv/form_backend/handlers"
+	"github.com/vmkevv/form_backend/middleware"
 )
 
 func hello(c *gin.Context) {

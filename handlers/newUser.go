@@ -1,14 +1,13 @@
 package handlers
 
 import (
-	"form-backend/db"
-	"form-backend/utils"
 	"net/http"
 	"time"
 
-	"golang.org/x/crypto/bcrypt"
-
 	"github.com/gin-gonic/gin"
+	"github.com/vmkevv/form_backend/db"
+	"github.com/vmkevv/form_backend/utils"
+	"golang.org/x/crypto/bcrypt"
 )
 
 // NewUser registers a new user in the app
@@ -32,7 +31,7 @@ func NewUser(c *gin.Context) {
 		return
 	}
 	user.Password = string(hashedPass)
-	var existEmail = user.CheckEmail(db.DBCon)
+	existEmail := user.CheckEmail(db.DBCon)
 	if existEmail {
 		utils.MakeR(c, http.StatusBadRequest, "El correo ingresado ya esta siendo usado.")
 		return
