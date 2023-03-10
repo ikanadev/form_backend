@@ -14,11 +14,11 @@ var DBCon *pg.DB
 func Connect() *pg.DB {
 	opts := &pg.Options{
 		User:     "taylor",
-		Password: "tallarin3",
+		Password: "postgres",
 		Addr:     "localhost:5432",
 		Database: "forms",
 	}
-	var db = pg.Connect(opts)
+	db := pg.Connect(opts)
 	if db == nil {
 		log.Printf("Failed to connect database \n")
 		os.Exit(100)

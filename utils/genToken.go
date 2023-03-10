@@ -1,10 +1,10 @@
 package utils
 
 import (
-	"form-backend/structs"
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
+	"github.com/vmkevv/form_backend/structs"
 )
 
 // GenToken generates a token, based in id and email
