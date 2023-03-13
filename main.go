@@ -69,5 +69,5 @@ func main() {
 	admin.GET("/form-ins", handlers.GetInsQuestions)
 
 	r.GET("/", hello)
-	r.Run(":4000") // listen and serve on 0.0.0.0:8080
+	r.Run(":4000")
 }

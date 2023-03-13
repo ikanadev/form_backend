@@ -1,6 +1,7 @@
 package db
 
 import (
+	"fmt"
 	"log"
 	"os"
 
@@ -13,9 +14,9 @@ var DBCon *pg.DB
 // Connect funct to connect to database
 func Connect() *pg.DB {
 	opts := &pg.Options{
-		User:     "taylor",
-		Password: "postgres",
-		Addr:     "localhost:5432",
+		User:     os.Getenv("DB_USER"),
+		Password: os.Getenv("DB_PASS"),
+		Addr:     fmt.Sprintf("%s:%s", os.Getenv("DB_HOST"), os.Getenv("DB_PORT")),
 		Database: "forms",
 	}
 	db := pg.Connect(opts)
